@@ -1,0 +1,11 @@
+
+plugin.tx_tgmdownloads_main {
+	view {
+		templateRootPaths.0 = {$plugin.tx_tgmdownloads_main.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_tgmdownloads_main.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_tgmdownloads_main.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_tgmdownloads_main.persistence.storagePid}
+	}
+}

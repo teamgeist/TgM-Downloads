@@ -1,0 +1,81 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:tgm_gce/Resources/Private/Language/locallang_be.xlf:tx_tgmgce_flex.general</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.flex.filter.categories>
+                        <TCEforms>
+                            <label>
+                                Kategorien
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectTree</renderType>
+                                <treeConfig>
+                                    <parentField>parent</parentField>
+                                    <appearance>
+                                        <maxLevels>99</maxLevels>
+                                        <showHeader>TRUE</showHeader>
+                                    </appearance>
+                                </treeConfig>
+                                <foreign_table>sys_category</foreign_table>
+                                <size>20</size>
+                                <minitems>0</minitems>
+                                <maxitems>99</maxitems>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.filter.categories>
+                    <settings.flex.filter.categoriesConjunction>
+                        <TCEforms>
+                            <label>
+                                Kategeorie Konjunktion
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:tgm_gce/Resources/Private/Language/locallang_be.xlf:tx_tgmgce_flex.conjunction.and
+                                        </numIndex>
+                                        <numIndex index="1">and</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:tgm_gce/Resources/Private/Language/locallang_be.xlf:tx_tgmgce_flex.conjunction.or
+                                        </numIndex>
+                                        <numIndex index="1">or</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.filter.categoriesConjunction>
+                    <settings.flex.pagination>
+                        <TCEforms>
+                            <label>
+                                Seitennavigation
+                            </label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.pagination>
+                    <settings.flex.dataTables>
+                        <TCEforms>
+                            <label>
+                                DataTables Aktivieren : Wenn DataTables aktiviert ist, ist die TYPO3 pagination deaktiviert (required Bootstrap und jQuery)
+                            </label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.dataTables>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

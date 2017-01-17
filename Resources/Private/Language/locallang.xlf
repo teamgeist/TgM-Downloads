@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-01-12T16:16:39Z" product-name="tgm_downloads">
+		<header/>
+		<body>
+			<trans-unit id="tx_tgmdownloads_domain_model_download">
+				<source>Download</source>
+			</trans-unit>
+			<trans-unit id="tx_tgmdownloads_domain_model_download.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_tgmdownloads_domain_model_download.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_tgmdownloads_domain_model_download.size">
+				<source>Size</source>
+			</trans-unit>
+			<trans-unit id="tx_tgmdownloads_domain_model_download.download">
+				<source>Download</source>
+			</trans-unit>
+			<trans-unit id="tx_tgmdownloads_domain_model_download.downloadtimes">
+				<source>Downloadtimes</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

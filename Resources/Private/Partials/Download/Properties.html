@@ -1,0 +1,37 @@
+
+<table class="tx-tgm-downloads" >
+	<tr>
+		<td>
+			<f:translate key="tx_tgmdownloads_domain_model_download.title" />
+		</td>
+		<td>
+		{download.title}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tgmdownloads_domain_model_download.date" />
+		</td>
+		<td>
+		{download.date -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tgmdownloads_domain_model_download.download" />
+		</td>
+		<td>
+				<a href="{download.download.originalResource.publicUrl}">
+					{download.download.originalResource.name}
+				</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_tgmdownloads_domain_model_download.downloadtimes" />
+		</td>
+		<td>
+		{download.downloadtimes}
+		</td>
+	</tr>
+</table>
