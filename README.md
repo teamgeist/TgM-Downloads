@@ -18,6 +18,7 @@ Here you can also set the categories that you wanna display.
 ## Features 
 * Pagination
 * DataTables
+* Download Counter
 * Filter: You can use TYPO3 categories for your downloads and so control your output, thanks filter settings inside the plugin.
 * Frontend output supports German and English
 
@@ -28,5 +29,13 @@ Here you can also set the categories that you wanna display.
 
 ### Nice to know
 * The plugin will gather all entrys for the entierly TYPO3 system, no storage puid needed. 
+
+### Changelog
+**BETA**
+- 1.0.0 : First public push on github
+- 1.0.1 :
+    * Add - Multi usage on the same page
+    * Add - Changelog in Readme file
+    * Bugfix - No rendering without pagination 
 
 

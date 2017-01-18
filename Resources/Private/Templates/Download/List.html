@@ -32,28 +32,56 @@
 			</f:widget.paginate>
 		</f:then>
 		<f:else>
-			<table class="table table-striped table-hover table-condensed table-bordered" id="{f:if(condition: settings.dataTables , then: 'table_downloads')}">
-				<thead>
-				<tr>
-					<th><f:translate key="tx_tgmdownloads_domain_model_download.title" /></th>
-					<f:comment><th><f:translate key="tx_tgmdownloads_domain_model_download.date" /></th></f:comment>
-					<th><f:translate key="tx_tgmdownloads_domain_model_download.size" /></th>
-					<th data-orderable="false"><f:translate key="tx_tgmdownloads_domain_model_download.download" /></th>
-					<f:comment><th><f:translate key="tx_tgmdownloads_domain_model_download.downloadtimes" /></th></f:comment>
-				</tr>
-				</thead>
-				<tbody>
-				<f:for each="{downloads}" as="download">
-					<tr>
-						<td>{download.title}</td>
-						<f:comment><td>{download.date -> f:format.date()}</td></f:comment>
-						<td>{download.download.originalResource.size -> f:format.bytes()}</td>
-						<td><f:link.action action="download" arguments="{download : download}" target="blank"><f:translate key="tx_tgmdownloads_domain_model_download.download" /></f:link.action></td>
-						<f:comment><td>{download.downloadtimes}</td></f:comment>
-					</tr>
-				</f:for>
-				</tbody>
-			</table>
+			<f:if condition="{settings.dataTables}">
+				<f:then>
+					<table class="table table-striped table-hover table-condensed table-bordered table_downloads">
+						<thead>
+						<tr>
+							<th><f:translate key="tx_tgmdownloads_domain_model_download.title" /></th>
+							<f:comment><th><f:translate key="tx_tgmdownloads_domain_model_download.date" /></th></f:comment>
+							<th><f:translate key="tx_tgmdownloads_domain_model_download.size" /></th>
+							<th data-orderable="false"><f:translate key="tx_tgmdownloads_domain_model_download.download" /></th>
+							<f:comment><th><f:translate key="tx_tgmdownloads_domain_model_download.downloadtimes" /></th></f:comment>
+						</tr>
+						</thead>
+						<tbody>
+						<f:for each="{downloads}" as="download">
+							<tr>
+								<td>{download.title}</td>
+								<f:comment><td>{download.date -> f:format.date()}</td></f:comment>
+								<td>{download.download.originalResource.size -> f:format.bytes()}</td>
+								<td><f:link.action action="download" arguments="{download : download}" target="blank"><f:translate key="tx_tgmdownloads_domain_model_download.download" /></f:link.action></td>
+								<f:comment><td>{download.downloadtimes}</td></f:comment>
+							</tr>
+						</f:for>
+						</tbody>
+					</table>
+				</f:then>
+				<f:else>
+					<table class="table table-striped table-hover table-condensed table-bordered">
+						<thead>
+						<tr>
+							<th><f:translate key="tx_tgmdownloads_domain_model_download.title" /></th>
+							<f:comment><th><f:translate key="tx_tgmdownloads_domain_model_download.date" /></th></f:comment>
+							<th><f:translate key="tx_tgmdownloads_domain_model_download.size" /></th>
+							<th data-orderable="false"><f:translate key="tx_tgmdownloads_domain_model_download.download" /></th>
+							<f:comment><th><f:translate key="tx_tgmdownloads_domain_model_download.downloadtimes" /></th></f:comment>
+						</tr>
+						</thead>
+						<tbody>
+						<f:for each="{downloads}" as="download">
+							<tr>
+								<td>{download.title}</td>
+								<f:comment><td>{download.date -> f:format.date()}</td></f:comment>
+								<td>{download.download.originalResource.size -> f:format.bytes()}</td>
+								<td><f:link.action action="download" arguments="{download : download}" target="blank"><f:translate key="tx_tgmdownloads_domain_model_download.download" /></f:link.action></td>
+								<f:comment><td>{download.downloadtimes}</td></f:comment>
+							</tr>
+						</f:for>
+						</tbody>
+					</table>
+				</f:else>
+			</f:if>
 		</f:else>
 	</f:if>
 </f:section>
