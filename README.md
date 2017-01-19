@@ -20,6 +20,7 @@ Here you can also set the categories that you wanna display.
 * DataTables
 * Download Counter
 * Filter: You can use TYPO3 categories for your downloads and so control your output, thanks filter settings inside the plugin.
+* Faceted Search (alias ke_search  version > 2.4.1) indexer out of the box
 * Frontend output supports German and English
 
 ## TODO
@@ -37,5 +38,7 @@ Here you can also set the categories that you wanna display.
     * Add - Multi usage on the same page
     * Add - Changelog in Readme file
     * Bugfix - No rendering without pagination 
+- 1.1.0 :
+    * Feature - ke_search indexer
 
 

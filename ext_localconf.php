@@ -16,3 +16,9 @@ if (!defined('TYPO3_MODE')) {
 		
 	)
 );
+
+if(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('ke_search')){
+    $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['ke_search']['registerIndexerConfiguration'][] = TGM\TgmDownloads\Utility\Indexer\KeSearchDownloadIndexer::class;
+    $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['ke_search']['customIndexer'][] = TGM\TgmDownloads\Utility\Indexer\KeSearchDownloadIndexer::class;
+    $GLOBALS['TCA']['tx_kesearch_indexerconfig']['columns']['sysfolder']['displayCond'] .= ',tgmdownloadindexer';
+}
