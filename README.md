@@ -24,8 +24,8 @@ Here you can also set the categories that you wanna display.
 * Frontend output supports German and English
 
 ## TODO
-* Translate the flexform labels(Plugin settings)
-* Add option for default orderings
+* Translate the flexform labels properly (Plugin settings)
+* Add more option for default orderings
 * Add a possibility to limit the plugin output on a single storage id (folder/page)
 
 ### Nice to know
@@ -40,5 +40,7 @@ Here you can also set the categories that you wanna display.
     * Bugfix - No rendering without pagination 
 - 1.1.0 :
     * Feature - ke_search indexer
+- 1.1.1 :
+    * Add - some simple sorting settings in the plugin
 
 

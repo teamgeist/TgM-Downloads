@@ -7,6 +7,48 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+                    <settings.flex.orderBy>
+                        <TCEforms>
+                            <label>
+                                Order By
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Backend sorting</numIndex>
+                                        <numIndex index="1">sorting</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Title</numIndex>
+                                        <numIndex index="1">title</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.orderBy>
+                    <settings.flex.orderType>
+                        <TCEforms>
+                            <label>
+                                Order Type
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Ascending</numIndex>
+                                        <numIndex index="1">ASC</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Descending</numIndex>
+                                        <numIndex index="1">DESC</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.orderType>
                     <settings.flex.filter.categories>
                         <TCEforms>
                             <label>

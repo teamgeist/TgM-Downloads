@@ -61,12 +61,19 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
                 $jsInit = '$(document).ready( function () {$(\'.table_downloads\').DataTable({
                     language: {
                         url: \'//cdn.datatables.net/plug-ins/1.10.13/i18n/German.json\'
-                    }
+                    },
+                    order: []
                 });} );';
             }
             $pageRenderer->addJsFooterInlineCode('dataTables',$jsInit);
             unset($settings['pagination']);
         }
+
+        //set ordering
+        if(!empty($settings['orderBy'])){
+            $this->downloadRepository->setDefaultOrderings([$settings['orderBy'] => $settings['orderType']]);
+        }
+        //get downloads
         $downloads = $this->downloadRepository->findViaFilter($settings['filter']);
 
         $this->view->assignMultiple([
