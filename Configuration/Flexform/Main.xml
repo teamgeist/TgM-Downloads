@@ -82,13 +82,13 @@
                                 <items type="array">
                                     <numIndex index="0" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:tgm_gce/Resources/Private/Language/locallang_be.xlf:tx_tgmgce_flex.conjunction.and
+                                            UND
                                         </numIndex>
                                         <numIndex index="1">and</numIndex>
                                     </numIndex>
                                     <numIndex index="1" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:tgm_gce/Resources/Private/Language/locallang_be.xlf:tx_tgmgce_flex.conjunction.or
+                                            ODER
                                         </numIndex>
                                         <numIndex index="1">or</numIndex>
                                     </numIndex>
