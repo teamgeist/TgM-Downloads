@@ -8,6 +8,7 @@ CREATE TABLE tx_tgmdownloads_domain_model_download (
 
 	title varchar(255) DEFAULT '' NOT NULL,
 	date date DEFAULT '0000-00-00',
+	description text NOT NULL,
 	download int(11) unsigned DEFAULT '0' NOT NULL,
 	downloadtimes varchar(255) DEFAULT '' NOT NULL,
 
