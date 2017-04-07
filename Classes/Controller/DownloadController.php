@@ -134,7 +134,7 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         $pageRenderer->addJsFooterFile('//cdn.datatables.net/v/bs/dt-1.10.13/r-2.1.0/datatables.min.js',
             'text/javascript', false, false, '', true);
         $pageRenderer->addCssLibrary('//cdn.datatables.net/v/bs/dt-1.10.13/r-2.1.0/datatables.min.css');
-        $jsInit = '$(document).ready( function () {$(\'#table_downloads\').DataTable();} );';
+        $jsInit = '$(document).ready( function () {$(\'.table_downloads\').DataTable();} );';
         if ($pageRenderer->getLanguage() == 'de') {
             $jsInit = '$(document).ready( function () {$(\'.table_downloads\').DataTable({
                     language: {
