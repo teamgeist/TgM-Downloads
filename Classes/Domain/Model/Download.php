@@ -60,7 +60,6 @@ class Download extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * date
      *
      * @var \DateTime
-     * @validate NotEmpty
      */
     protected $date = null;
     
@@ -107,7 +106,7 @@ class Download extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->categories = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
-    
+
     /**
      * Returns the crdate
      *
@@ -117,7 +116,9 @@ class Download extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->crdate;
     }
+
     
+
     /**
      * Returns the title
      *
@@ -176,7 +177,7 @@ class Download extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param \DateTime $date
      * @return void
      */
-    public function setDate(\DateTime $date)
+    public function setDate(\DateTime $date = null)
     {
         $this->date = $date;
     }

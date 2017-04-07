@@ -70,10 +70,20 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         //find the newest download (by Date, if no date is set crdate will be used) @TODO make own repository query
         if (!empty($settings['latest'])) {
             $download = $this->findNewestDownload($downloads);
+            $descr = $download->getDescription();
+            if(strlen($descr) > 90){
+                $descr = wordwrap($descr, 90);
+                $descrPreview = substr($descr,0,strpos($descr,"\n"));
+                $descrPreview .= ' ...';
+                $descrRest = '... ';
+                $descrRest .= substr($descr,strpos($descr,"\n"));
+            }
 
             $this->view->assignMultiple([
                 'latestDownload' => $download,
-                'settings' => $settings
+                'settings' => $settings,
+                'descrPreview' => $descrPreview,
+                'descrRest' => $descrRest,
             ]);
         }
 
@@ -152,7 +162,7 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @param \TGM\TgmDownloads\Domain\Model\Download $download
      * @return string|void
      */
-    public function downloadAction(\TGM\TgmDownloads\Domain\Model\Download $download)
+    public function downloadAction(\TGM\TgmDownloads\Domain\Model\Download $download = null)
     {
         //Set Downloadtimes +1
         $downloadtimes = $download->getDownloadtimes();
