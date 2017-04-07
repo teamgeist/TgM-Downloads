@@ -118,7 +118,7 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
                     $latestDownload = $download;
                 }
             }
-            return $download;
+            return $latestDownload;
         }
         return false;
     }
