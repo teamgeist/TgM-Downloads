@@ -42,5 +42,8 @@ Here you can also set the categories that you wanna display.
     * Feature - ke_search indexer
 - 1.1.1 :
     * Add - some simple sorting settings in the plugin
+- 1.2.0 :
+    * Add - RTE Download description field
+    * Add - You have now the possibility to show only the newest download (we compare the date inside the records, if there is no one, we take the crdate for comparison)
 
 

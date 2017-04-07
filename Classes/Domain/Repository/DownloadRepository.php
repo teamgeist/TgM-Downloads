@@ -46,7 +46,6 @@ class DownloadRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         /** @var $querySettings \TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings */
         $querySettings = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings::class);
 
-
         //Set on false so we get all entrys
         $querySettings->setRespectStoragePage(false);
         $this->setDefaultQuerySettings($querySettings);

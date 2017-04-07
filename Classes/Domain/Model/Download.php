@@ -48,7 +48,14 @@ class Download extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $description = '';
-    
+
+    /**
+     * crdate
+     *
+     * @var int
+     */
+    protected $crdate = '';
+
     /**
      * date
      *
@@ -99,6 +106,16 @@ class Download extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected function initStorageObjects()
     {
         $this->categories = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
+    
+    /**
+     * Returns the crdate
+     *
+     * @return string $crdate
+     */
+    public function getCrdate()
+    {
+        return $this->crdate;
     }
     
     /**

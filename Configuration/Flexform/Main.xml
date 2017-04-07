@@ -7,6 +7,16 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+                    <settings.flex.latest>
+                        <TCEforms>
+                            <label>
+                                Latest view verwenden (Zeigt nur den neuesten Datensatz nach Datum)
+                            </label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.latest>
                     <settings.flex.orderBy>
                         <TCEforms>
                             <label>

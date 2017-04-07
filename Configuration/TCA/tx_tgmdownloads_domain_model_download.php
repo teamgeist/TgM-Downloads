@@ -68,6 +68,12 @@ return array(
 			),
 		),
 
+		'crdate' => array(
+			'config' => array(
+				'type' => 'passthrough',
+			),
+		),
+
 		't3ver_label' => array(
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
 			'config' => array(
