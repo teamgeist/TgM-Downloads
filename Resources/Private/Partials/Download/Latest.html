@@ -1,14 +1,14 @@
 <div class="tgm-download">
-    <div class="title"><h3>{download.title}</h3></div>
-    <div class="datum">Veröffenlichung vom:
-        <f:format.date format="%B %Y">{download.date}</f:format.date>
-    </div>
+	<div class="title"><h3>{download.title}</h3></div>
+	<div class="datum">Veröffenlichung vom:
+		<f:format.date format="%B %Y">{download.date}</f:format.date>
+	</div>
 
-    <f:link.action action="download" arguments="{download : download}" target="blank">
-        <f:translate key="tx_tgmdownloads_domain_model_download.download"/>
-    </f:link.action>
-    <div class="size"> {download.download.originalResource.size -> f:format.bytes()}</div>
-    <f:comment>
-        <td>{download.downloadtimes}</td>
-    </f:comment>
+	<f:link.action action="download" arguments="{download : download}" target="blank">
+		<f:translate key="tx_tgmdownloads_domain_model_download.download"/>
+	</f:link.action>
+	<div class="size"> {download.download.originalResource.size -> f:format.bytes()}</div>
+	<f:comment>
+		<td>{download.downloadtimes}</td>
+	</f:comment>
 </div>

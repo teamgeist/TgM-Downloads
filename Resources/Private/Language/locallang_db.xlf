@@ -15,6 +15,9 @@
 			<trans-unit id="tx_tgmdownloads_domain_model_download.download">
 				<source>Download</source>
 			</trans-unit>
+			<trans-unit id="tx_tgmdownloads_domain_model_download.description">
+				<source>Description</source>
+			</trans-unit>
 			<trans-unit id="tx_tgmdownloads_domain_model_download.downloadtimes">
 				<source>Downloadtimes</source>
 			</trans-unit>

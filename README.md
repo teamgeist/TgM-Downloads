@@ -45,5 +45,9 @@ Here you can also set the categories that you wanna display.
 - 1.2.0 :
     * Add - RTE Download description field
     * Add - You have now the possibility to show only the newest download (we compare the date inside the records, if there is no one, we take the crdate for comparison)
+- 1.2.1 :
+    * Bugfixes - Some minor template fixes and one exception when no download was available 
+    * Add - German translation for the Backend Fields
+
 
 
