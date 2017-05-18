@@ -69,23 +69,24 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
 		//find the newest download (by Date, if no date is set crdate will be used) @TODO make own repository query
 		if(!empty($settings['latest'])) {
-			$download = $this->findNewestDownload($downloads);
-			if($download) {
-				$descr = $download->getDescription();
-				if(strlen($descr) > 90) {
-					$descr = wordwrap($descr, 90);
-					$descrPreview = substr($descr, 0, strpos($descr, "\n"));
-					$descrPreview .= ' ...';
-					$descrRest = '... ';
-					$descrRest .= substr($descr, strpos($descr, "\n"));
-				}
+            $download = $this->findNewestDownload($downloads);
+            if ($download) {
+                $descr = $download->getDescription();
+                if (strlen($descr) > 90) {
+                    $descr = wordwrap($descr, 90);
+                    $descrPreview = substr($descr, 0, strpos($descr, "\n"));
+                    $descrPreview .= ' ...';
+                    $descrRest = '... ';
+                    $descrRest .= substr($descr, strpos($descr, "\n"));
+                }
 
-            $this->view->assignMultiple([
-                'latestDownload' => $download,
-                'settings' => $settings,
-                'descrPreview' => $descrPreview,
-                'descrRest' => $descrRest,
-            ]);
+                $this->view->assignMultiple([
+                    'latestDownload' => $download,
+                    'settings' => $settings,
+                    'descrPreview' => $descrPreview,
+                    'descrRest' => $descrRest,
+                ]);
+            }
         }
 
         $this->view->assignMultiple([
