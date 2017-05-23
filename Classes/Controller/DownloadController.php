@@ -73,11 +73,12 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             if ($download) {
                 $descr = $download->getDescription();
                 if (strlen($descr) > 90) {
-                    $descr = wordwrap($descr, 90);
-                    $descrPreview = substr($descr, 0, strpos($descr, "\n"));
-                    $descrPreview .= ' ...';
+                    $descr = wordwrap($descr, 90,'###');
+                    $descrPreview = substr($descr, 0, strpos($descr, '###'));
+                    $descrPreview .= '...';
                     $descrRest = '... ';
-                    $descrRest .= substr($descr, strpos($descr, "\n"));
+                    $descrRest .= substr($descr, strpos($descr, "###"));
+                    $descrRest = str_replace('###',' ',$descrRest);
                 }
 
                 $this->view->assignMultiple([
@@ -88,11 +89,12 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
                 ]);
             }
         }
-
+        /*
         $this->view->assignMultiple([
             'downloads' => $downloads,
             'settings' => $settings
         ]);
+        */
     }
 
     /**
