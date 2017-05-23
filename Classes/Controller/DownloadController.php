@@ -89,12 +89,12 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
                 ]);
             }
         }
-        /*
+
         $this->view->assignMultiple([
             'downloads' => $downloads,
             'settings' => $settings
         ]);
-        */
+
     }
 
     /**
