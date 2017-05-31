@@ -48,6 +48,10 @@ Here you can also set the categories that you wanna display.
 - 1.2.1 :
     * Bugfixes - Some minor template fixes and one exception when no download was available 
     * Add - German translation for the Backend Fields
+- 1.2.2 :
+    * Add - Sorting By Date fallback on crdate
+    * Add - Some text cropping possibilities for the latest(newest) view
+    * Add - The possibility to add the list page id in the plugin. So you can for example create a link inside your template which leads you show all downloads
 
 
 

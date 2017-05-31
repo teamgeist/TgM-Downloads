@@ -17,6 +17,36 @@
                             </config>
                         </TCEforms>
                     </settings.flex.latest>
+                    <settings.flex.crop>
+                        <TCEforms>
+                            <label>
+                                Texte croppen (Stellt zwei variablen im Template zu verfügung descrPreview und descrRest) !Nur in latest ansicht
+                            </label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.crop>
+                    <settings.flex.cropLength>
+                        <TCEforms>
+                            <label>
+                                Anzahl an Zeichen nach den gecroppt werden soll !Nur in latest ansicht
+                            </label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.cropLength>
+                    <settings.flex.listPid>
+                        <TCEforms>
+                            <label>
+                                PID zur Listenansicht, steht im Template zu Verfügung als listPid z.B. für ein Link zu allen Downloads
+                            </label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flex.listPid>
                     <settings.flex.orderBy>
                         <TCEforms>
                             <label>
@@ -33,6 +63,10 @@
                                     <numIndex index="1" type="array">
                                         <numIndex index="0">Title</numIndex>
                                         <numIndex index="1">title</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Date</numIndex>
+                                        <numIndex index="1">date</numIndex>
                                     </numIndex>
                                 </items>
                             </config>

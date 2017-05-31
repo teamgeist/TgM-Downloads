@@ -61,7 +61,11 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
         //set ordering
         if (!empty($settings['orderBy'])) {
-            $this->downloadRepository->setDefaultOrderings([$settings['orderBy'] => $settings['orderType']]);
+            if ($settings['orderBy'] === 'date'){
+                $this->downloadRepository->setDefaultOrderings([$settings['orderBy'] => $settings['orderType'], 'crdate' => $settings['orderType']]);
+            }else{
+                $this->downloadRepository->setDefaultOrderings([$settings['orderBy'] => $settings['orderType']]);
+            }
         }
 
         //get downloads
@@ -72,13 +76,15 @@ class DownloadController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             $download = $this->findNewestDownload($downloads);
             if ($download) {
                 $descr = $download->getDescription();
-                if (strlen($descr) > 90) {
-                    $descr = wordwrap($descr, 90,'###');
-                    $descrPreview = substr($descr, 0, strpos($descr, '###'));
-                    $descrPreview .= '...';
-                    $descrRest = '... ';
-                    $descrRest .= substr($descr, strpos($descr, "###"));
-                    $descrRest = str_replace('###',' ',$descrRest);
+                if($settings['crop']){
+                    if (strlen($descr) > (int)$settings['cropLength']) {
+                        $descr = wordwrap($descr, (int)$settings['cropLength'],'###');
+                        $descrPreview = substr($descr, 0, strpos($descr, '###'));
+                        $descrPreview .= '...';
+                        $descrRest = '... ';
+                        $descrRest .= substr($descr, strpos($descr, "###"));
+                        $descrRest = str_replace('###',' ',$descrRest);
+                    }
                 }
 
                 $this->view->assignMultiple([
